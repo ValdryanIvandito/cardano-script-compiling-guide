@@ -15,7 +15,7 @@ When installing the Plutus environment on our local machine, it can require sign
 5. Select a network. In this example, we'll use Preprod
 6. Run the workspace and wait a moment. After provisioning is complete, then open the VSCode feature in the browser
 
-## Open a Bash Terminal in the VSCode Browser
+## Open a Bash Terminal in the VSCode
 
 1. Clone Gimbalabs PPBL2023 Plutus Template
 

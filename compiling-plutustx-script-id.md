@@ -15,7 +15,7 @@ Ketika menginstal Plutus environment di mesin lokal kita, hal itu membutuhkan us
 5. Pilih network. Pada contoh kali ini, kita akan menggunakan Preprod.
 6. Jalankan workspace dan tunggu sebentar. Setelah penyiapan selesai, maka buka fitur VSCode browser.
 
-## Buka Terminal Bash di Browser VSCode
+## Buka Terminal Bash di VSCode
 
 1. Clone Dari Repositori Gimbalabs PPBL2023 Plutus Template
 
