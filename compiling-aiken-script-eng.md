@@ -23,75 +23,65 @@ In this documentation, there are two methods to set up the environment. We can u
 
 1. Create New Aiken Project
 
-```bash
-aiken new aiken-lang/aiken-template
-```
+   ```bash
+   aiken new aiken-lang/aiken-template
+   ```
 
 2. Go to aiken-template Directory
 
-```bash
-cd aiken-template
-```
+   ```bash
+   cd aiken-template
+   ```
 
 3. Create an always_succeeds.ak File, Which is a Validator Script
 
-```bash
-touch validators/always_succeeds.ak
-```
+   ```bash
+   touch validators/always_succeeds.ak
+   ```
 
 4. Copy and Paste The Example Validator Script to always_succeeds.ak File
 
-```aiken
-validator {
-  fn always_succeed(_datum: Data, _redeemer: Data, _context: Data) -> Bool {
-    True
-  }
-}
-```
+   ```rust
+   validator {
+   fn always_succeed(_datum: Data, _redeemer: Data, _context: Data) -> Bool {
+       True
+   }
+   }
+   ```
 
-**_Note: This is a simple validator script where the output is always true._**
+   **_Note: This is a simple validator script where the output is always true._**
 
 5. Build / Compile Validator Script
 
-```bash
-aiken build
-```
+   ```bash
+   aiken build
+   ```
 
-**_Result: Look at the plutus.json file, there is compiledCode, which is the same as CBOR._**
+   **_Result: Look at the plutus.json file, there is compiledCode, which is the same as CBOR._**
 
 6. Create Output Directory and always-succeeds.plutus File
 
-```bash
-mkdir -p output && touch output/always-succeeds.plutus
-```
+   ```bash
+   mkdir -p output && touch output/always-succeeds.plutus
+   ```
 
 7. Copy and paste UPLC template to always-succeeds.plutus File
 
-```json
-{
-  "type": "PlutusScriptV2",
-  "description": "",
-  "cborHex": "510100003222253330044a229309b2b2b9a1"
-}
-```
+   ```json
+   {
+     "type": "PlutusScriptV2",
+     "description": "",
+     "cborHex": "510100003222253330044a229309b2b2b9a1"
+   }
+   ```
 
 8. Replace CBOR Hex
 
-In the always-succeeds.plutus file, replace CBOR value string with the compiledCode value string from the plutus.json file as shown in the image below:
+   In the always-succeeds.plutus file, replace CBOR value string with the compiledCode value string from the plutus.json file as shown in the image below:
 
-![always-succeeds.plutus](public/aiken-script-compiled.png)
+   ![always-succeeds.plutus](public/aiken-script-compiled.png)
 
-If you’re done, then congratulation! you've successfully compiled the Aiken validator script into UPLC.
-
-## Result
-
-If you successfully execute the writeAlwaysSucceedsScript, the result will be shown as right() in the terminal, and in the output directory, you'll find a file named always-succeeds.plutus, as shown in the image below:
-
-![right-result](public/right-result.png)
-
-![always-succeeds.plutus](public/plutustx-script-compiled.png)
-
-Then congratulations! You've successfully compiled the PlutusTx validator script into UPLC
+   If you’re done, then congratulation! you've successfully compiled the Aiken validator script into UPLC.
 
 # Demo
 

@@ -19,34 +19,34 @@ Ketika menginstal Plutus environment di mesin lokal kita, hal itu membutuhkan us
 
 1. Clone Dari Repositori Gimbalabs PPBL2023 Plutus Template
 
-```bash
-git clone https://gitlab.com/gimbalabs/ppbl-2023/ppbl2023-plutus-template.git
-```
+   ```bash
+   git clone https://gitlab.com/gimbalabs/ppbl-2023/ppbl2023-plutus-template.git
+   ```
 
 2. Menuju ke Direktori PPBL2023 Plutus Template
 
-```bash
-cd ppbl2023-plutus-template
-```
+   ```bash
+   cd ppbl2023-plutus-template
+   ```
 
 3. Buat Direktori Output Dimana Ini Adalah Tempatnya File .plutus
 
-```bash
-mkdir output
-```
+   ```bash
+   mkdir output
+   ```
 
 4. Jalankan Cabal
 
-```bash
-cabal update
-cabal repl
-```
+   ```bash
+   cabal update
+   cabal repl
+   ```
 
 5. Ketika masuk repl, jalankan:
 
-```repl
-writeAlwaysSucceedsScript
-```
+   ```repl
+   writeAlwaysSucceedsScript
+   ```
 
 ## Hasil
 

@@ -19,34 +19,34 @@ When installing the Plutus environment on our local machine, it can require sign
 
 1. Clone Gimbalabs PPBL2023 Plutus Template
 
-```bash
-git clone https://gitlab.com/gimbalabs/ppbl-2023/ppbl2023-plutus-template.git
-```
+   ```bash
+   git clone https://gitlab.com/gimbalabs/ppbl-2023/ppbl2023-plutus-template.git
+   ```
 
 2. Go to PPBL2023 Plutus Template Directory
 
-```bash
-cd ppbl2023-plutus-template
-```
+   ```bash
+   cd ppbl2023-plutus-template
+   ```
 
 3. Create an Output Directory Where This is The Place For .plutus Files
 
-```bash
-mkdir output
-```
+   ```bash
+   mkdir output
+   ```
 
 4. Run Cabal
 
-```bash
-cabal update
-cabal repl
-```
+   ```bash
+   cabal update
+   cabal repl
+   ```
 
 5. In the repl, run:
 
-```repl
-writeAlwaysSucceedsScript
-```
+   ```repl
+   writeAlwaysSucceedsScript
+   ```
 
 ## Result
 
