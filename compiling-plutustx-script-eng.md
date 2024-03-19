@@ -50,7 +50,9 @@ writeAlwaysSucceedsScript
 
 ## Result
 
-If you successfully execute writeAlwaysSucceedsScript, the result will be shown as **_right()_** and Look in the output directory. If you find a file named **_always-succeeds.plutus_** like the image below:
+If you successfully execute the writeAlwaysSucceedsScript, the result will be shown as right() in the terminal, and in the output directory, you'll find a file named always-succeeds.plutus, as shown in the image below:
+
+![right-result](public/right-result.png)
 
 ![always-succeeds.plutus](public/plutustx-script-compiled.png)
 
