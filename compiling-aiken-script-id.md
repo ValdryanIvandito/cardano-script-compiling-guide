@@ -4,7 +4,7 @@ Ini adalah dokumentasi yang memberikan panduan langkah demi langkah cara mengomp
 
 # Langkah-langkah
 
-Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan lingkungan. Kita dapat menggunakan demeter.run atau mesin lokal kita, pilih salah satu.
+Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita dapat menggunakan demeter.run atau mesin lokal kita, pilih salah satu.
 
 ## Setup Environment
 
@@ -146,7 +146,7 @@ Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan lingkungan. Kita dap
 
 Berikut adalah video yang direkam oleh Komunitas Developer Cardano Indonesia di mana saya menjelaskan langkah-langkah di atas. Tonton video yang direkam pada timestamp **_1:27:27_** di [link](https://youtu.be/03hXLZ_07N0?list=PLUj8499OocHiL8gXPv8wMlLW-zIcyYdrQ) berikut ini.
 
-# References
+# Referensi
 
 [Cardano Developers Portal: Plutus](https://developers.cardano.org/docs/smart-contracts/plutus/)
 
