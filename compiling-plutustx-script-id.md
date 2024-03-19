@@ -23,7 +23,7 @@ Ketika menginstal Plutus environment di mesin lokal kita, hal itu membutuhkan us
    git clone https://gitlab.com/gimbalabs/ppbl-2023/ppbl2023-plutus-template.git
    ```
 
-2. Menuju ke Direktori PPBL2023 Plutus Template
+2. Menuju Direktori PPBL2023 Plutus Template
 
    ```bash
    cd ppbl2023-plutus-template

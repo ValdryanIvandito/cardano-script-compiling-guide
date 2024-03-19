@@ -1,66 +1,150 @@
-# Introduction
+# Pendahuluan
 
-This is documentation that gives you a step-by-step guide on how to compile a PlutusTx script into UPLC. If you successfully compile the script, you will find a file with a **_.plutus_** extension, which is a UPLC. This UPLC has a CBOR format that can be used on-chain.
+Ini adalah dokumentasi yang memberikan panduan langkah demi langkah cara mengompilasi skrip Aiken menjadi UPLC. Jika Anda berhasil mengompilasi skrip, lihatlah file plutus.json dan di dalamnya terdapat compiledCode, yang merupakan bagian CBOR dari UPLC dan dapat digunakan di on-chain.
 
-When installing the Plutus environment on our local machine, it can require significant effort. However, there is an alternative. We can use [demeter.run](https://demeter.run/), which provides Cardano infrastructures, tools, libraries, and, of course, the Plutus environment.
+# Langkah-langkah
 
-# Step by step
+Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan lingkungan. Kita dapat menggunakan demeter.run atau mesin lokal kita, pilih salah satu.
 
-## Setup Demeter
+## Setup Environment
 
-1. Use demeter.run, if you haven’t an account then create new account
-2. Add resource and select workspace
-3. In the toolchain section, select PlutusTx
-4. Select a large workspace size
-5. Select a network. In this example, we'll use Preprod
-6. Run the workspace and wait a moment. After provisioning is complete, then open the VSCode feature in the browser
+### Demeter
 
-## Open a Bash Terminal in the VSCode Browser
+1. Gunakan demeter.run, jika Anda belum memiliki akun, maka buatlah akun baru.
+2. Tambahkan resource dan pilih workspace.
+3. Pada bagian toolchain, pilih Aiken.
+4. Pilih ukuran large workspace.
+5. Pilih network. Pada contoh kali ini, kita akan menggunakan Preprod.
+6. Jalankan workspace dan tunggu sebentar. Setelah penyiapan selesai, maka buka fitur VSCode browser.
 
-1. Clone Gimbalabs PPBL2023 Plutus Template
+### Lokal
 
-```bash
-git clone https://gitlab.com/gimbalabs/ppbl-2023/ppbl2023-plutus-template.git
-```
+1. Instalasi Cargo / Rust Package Manager
+   Jika Anda menggunakan Linux / macOS, eksekusi:
 
-2. Go to PPBL2023 Plutus Template Directory
+   ```bash
+   curl https://sh.rustup.rs -sSf | sh
+   ```
 
-```bash
-cd ppbl2023-plutus-template
-```
+   Jika Anda menggunakan Windows, download lalu eksekusi [rustup-init.exe](https://win.rustup.rs/)
 
-3. Create an Output Directory Where This is The Place For .plutus Files
+   **_Kemudian muncul seperti ini:_**
 
-```bash
-mkdir output
-```
+   ```text
+   1. Quick install via the Visual Studio Community installer
+      (free for individuals, academic uses, and open source).
 
-4. Run Cabal
+   2. Manually install the prerequisites
+      (for enterprise and advanced users).
 
-```bash
-cabal update
-cabal repl
-```
+   3. Don't install the prerequisites
+      (if you're targeting the GNU ABI).
+   ```
 
-5. In the repl, run:
+   **_Rekomendasi pilih nomor 1_**
 
-```repl
-writeAlwaysSucceedsScript
-```
+   ```text
+   1) Proceed with standard installation (default - just press enter)
+   2) Customize installation
+   3) Cancel installation
+   ```
 
-## Result
+   **_Rekomendasi pilih nomor 1_**
 
-If you successfully execute the writeAlwaysSucceedsScript, the result will be shown as right() in the terminal, and in the output directory, you'll find a file named always-succeeds.plutus, as shown in the image below:
+2. Periksa Versi Rust dan Cargo
 
-![right-result](public/right-result.png)
+   **_Petunjuk: Setelah proses instalasi selesai, sebaiknya restart terminal_**
 
-![always-succeeds.plutus](public/plutustx-script-compiled.png)
+   ```bash
+   rustc --version
+   cargo --version
+   ```
 
-Then congratulations! You've successfully compiled the PlutusTx validator script into UPLC
+3. Instalasi Aiken
+
+   ```bash
+   cargo install aiken --version 1.0.24-alpha
+   ```
+
+   **_Catatan: Untuk mendapatkan Aiken versi terbaru, kunjungi [Aiken Installation Intructions Official Site](https://aiken-lang.org/installation-instructions)_**
+
+4. Periksa Versi Aiken
+
+   **_Petunjuk: Setelah proses instalasi selesai, sebaiknya restart terminal_**
+
+   ```bash
+   aiken --version
+   ```
+
+   **_Catatan: Anda mengetahui bahwa Aiken berhasil terinstall jika dapat melihat versi Aiken tersebut_**
+
+## Buka Terminal Bash di VSCode
+
+1. Buat Proyek Aiken Baru
+
+   ```bash
+   aiken new aiken-lang/aiken-template
+   ```
+
+2. Menuju direktori aiken-template
+
+   ```bash
+   cd aiken-template
+   ```
+
+3. Membuat File always_succeeds.ak, Yang Merupakan Skrip Validator
+
+   ```bash
+   touch validators/always_succeeds.ak
+   ```
+
+4. Copy dan Paste Contoh Skrip Validator Berikut ke File always_succeeds.ak
+
+   ```rust
+   validator {
+     fn always_succeed(_datum: Data, _redeemer: Data, _context: Data) -> Bool {
+         True
+     }
+   }
+   ```
+
+   **_Catatan: Ini adalah contoh validator sederhana yang outputnya selalu berlogika true._**
+
+5. Build / Kompilasi Skrip Validator
+
+   ```bash
+   aiken build
+   ```
+
+   **_Hasil: Lihat di file plutus.json, disitu terdapat compilerCode yang merupakan CBOR._**
+
+6. Buat Direktori Output dan File always-succeeds.plutus
+
+   ```bash
+   mkdir -p output && touch output/always-succeeds.plutus
+   ```
+
+7. Copy dan paste template UPLC berikut ke File always-succeeds.plutus
+
+   ```json
+   {
+     "type": "PlutusScriptV2",
+     "description": "",
+     "cborHex": "49480100002221200101"
+   }
+   ```
+
+8. Ganti CBOR Hex
+
+   Pada file Always-succeeds.plutus, ganti string CBOR dengan string compilerCode dari file plutus.json seperti pada gambar di bawah ini:
+
+   ![always-succeeds.plutus](public/aiken-script-compiled.png)
+
+   Jika sudah selesai, selamat! Anda telah berhasil mengkompilasi skrip validator Aiken ke dalam UPLC.
 
 # Demo
 
-The following is a video recorded by the Indonesian Cardano Developers Community where I demonstrated the steps above. Watch the recorded video at timestamp **_1:27:27_**, here is the [link](https://youtu.be/03hXLZ_07N0?list=PLUj8499OocHiL8gXPv8wMlLW-zIcyYdrQ)
+Berikut adalah video yang direkam oleh Komunitas Developer Cardano Indonesia di mana saya menjelaskan langkah-langkah di atas. Tonton video yang direkam pada timestamp **_1:27:27_** di [link](https://youtu.be/03hXLZ_07N0?list=PLUj8499OocHiL8gXPv8wMlLW-zIcyYdrQ) berikut ini.
 
 # References
 
@@ -78,6 +162,6 @@ The following is a video recorded by the Indonesian Cardano Developers Community
 
 [Gimbalabs PPBL Module 101.2: The Role of UPLC](https://plutuspbl.io/modules/101/1012)
 
-[Gimbalabs PPBL Module 101.3: Compiling PlutusTx](https://plutuspbl.io/modules/101/1013)
+[Gimbalabs PPBL Module 101.5: Compiling Aiken](https://plutuspbl.io/modules/101/1015)
 
 [Cardano Academy](https://academy.cardanofoundation.org/)

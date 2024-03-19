@@ -4,7 +4,7 @@ This is documentation that gives you a step-by-step guide on how to compile a Ai
 
 # Step by step
 
-In this documentation, there are two methods to set up the environment. We can use demeter.run or our local machine. Choose one:
+In this documentation, there are two methods to set up the environment. We can use [demeter.run](https://demeter.run/) or our local machine, choose one.
 
 ## Setup Environment
 
@@ -41,7 +41,7 @@ In this documentation, there are two methods to set up the environment. We can u
       (if you're targeting the GNU ABI).
    ```
 
-   **_You may choose option 1 if you want to install the prerequisite_**
+   **_Recommendation choose number 1_**
 
    ```text
    1) Proceed with standard installation (default - just press enter)
@@ -53,7 +53,7 @@ In this documentation, there are two methods to set up the environment. We can u
 
 2. Check Rust and Cargo Version
 
-   **_hint: After the installation is completed, you should restart the terminal_**
+   **_Hint: After the installation is completed, you should restart the terminal_**
 
    ```bash
    rustc --version
@@ -66,17 +66,17 @@ In this documentation, there are two methods to set up the environment. We can u
    cargo install aiken --version 1.0.24-alpha
    ```
 
-   **_note: To get the latest Aiken version, go to [Aiken Installation Intructions Official Site](https://aiken-lang.org/installation-instructions)_**
+   **_Note: To get the latest Aiken version, go to [Aiken Installation Intructions Official Site](https://aiken-lang.org/installation-instructions)_**
 
 4. Check Aiken Version
 
-   **_hint: After the installation is completed, you should restart the terminal_**
+   **_Hint: After the installation is completed, you should restart the terminal_**
 
    ```bash
    aiken --version
    ```
 
-   **_note: You will know you are successful if you can run_**
+   **_Note: You will know you are successful if you can run_**
 
 ## Open a Bash Terminal in the VSCode
 
@@ -130,7 +130,7 @@ In this documentation, there are two methods to set up the environment. We can u
    {
      "type": "PlutusScriptV2",
      "description": "",
-     "cborHex": "510100003222253330044a229309b2b2b9a1"
+     "cborHex": "49480100002221200101"
    }
    ```
 
