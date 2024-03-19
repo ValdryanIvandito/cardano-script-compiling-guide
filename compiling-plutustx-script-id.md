@@ -1,6 +1,6 @@
 # Pendahuluan
 
-Ini adalah dokumentasi yang memberikan panduan langkah demi langkah cara mengompilasi skrip PlutusTx menjadi UPLC. Jika Anda berhasil mengompilasi skrip, Anda akan menemukan file dengan ekstensi .plutus, yang merupakan UPLC,file ini memiliki format CBOR yang dapat digunakan di on-chain.
+Ini adalah dokumentasi yang memberikan panduan langkah demi langkah cara mengompilasi skrip PlutusTx menjadi UPLC. Jika Anda berhasil mengompilasi skrip, Anda akan menemukan file dengan ekstensi .plutus, yang merupakan UPLC, file ini memiliki format CBOR yang dapat digunakan di on-chain.
 
 Ketika menginstal Plutus environment di mesin lokal kita, hal itu membutuhkan usaha yang signifikan. Namun, ada alternatifnya, kita dapat menggunakan [demeter.run](https://demeter.run/) yang menyediakan infrastruktur, tools, library di Cardano, dan tentu saja ada Plutus environment.
 
