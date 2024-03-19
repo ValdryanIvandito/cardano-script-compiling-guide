@@ -19,6 +19,65 @@ In this documentation, there are two methods to set up the environment. We can u
 
 ### On Local Machine
 
+1. Install Cargo / Rust Package Manager
+   If you're using linux or macOS, run:
+
+   ```bash
+   curl https://sh.rustup.rs -sSf | sh
+   ```
+
+   if you're using windows, download and run [rustup-init.exe](https://win.rustup.rs/)
+
+   **_After executing it, it will appear like this:_**
+
+   ```text
+   1. Quick install via the Visual Studio Community installer
+      (free for individuals, academic uses, and open source).
+
+   2. Manually install the prerequisites
+      (for enterprise and advanced users).
+
+   3. Don't install the prerequisites
+      (if you're targeting the GNU ABI).
+   ```
+
+   **_You may choose option 1 if you want to install the prerequisite_**
+
+   ```text
+   1) Proceed with standard installation (default - just press enter)
+   2) Customize installation
+   3) Cancel installation
+   ```
+
+   **_Recommendation choose number 1_**
+
+2. Check Rust and Cargo Version
+
+   **_hint: After the installation is completed, you should restart the terminal_**
+
+   ```bash
+   rustc --version
+   cargo --version
+   ```
+
+3. Install Aiken
+
+   ```bash
+   cargo install aiken --version 1.0.24-alpha
+   ```
+
+   **_note: To get the latest Aiken version, go to [Aiken Installation Intructions Official Site](https://aiken-lang.org/installation-instructions)_**
+
+4. Check Aiken Version
+
+   **_hint: After the installation is completed, you should restart the terminal_**
+
+   ```bash
+   aiken --version
+   ```
+
+   **_note: You will know you are successful if you can run_**
+
 ## Open a Bash Terminal in the VSCode
 
 1. Create New Aiken Project
@@ -43,9 +102,9 @@ In this documentation, there are two methods to set up the environment. We can u
 
    ```rust
    validator {
-   fn always_succeed(_datum: Data, _redeemer: Data, _context: Data) -> Bool {
-       True
-   }
+     fn always_succeed(_datum: Data, _redeemer: Data, _context: Data) -> Bool {
+         True
+     }
    }
    ```
 
@@ -103,6 +162,6 @@ The following is a video recorded by the Indonesian Cardano Developers Community
 
 [Gimbalabs PPBL Module 101.2: The Role of UPLC](https://plutuspbl.io/modules/101/1012)
 
-[Gimbalabs PPBL Module 101.3: Compiling PlutusTx](https://plutuspbl.io/modules/101/1013)
+[Gimbalabs PPBL Module 101.5: Compiling Aiken](https://plutuspbl.io/modules/101/1015)
 
 [Cardano Academy](https://academy.cardanofoundation.org/)
