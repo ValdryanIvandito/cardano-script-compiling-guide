@@ -8,7 +8,7 @@ Ketika menginstal Plutus environment di mesin lokal kita, hal itu membutuhkan us
 
 ## Step-1 Setup Demeter
 
-1. Gunakan demeter.run, jika Anda belum memiliki akun, maka buatlah akun baru.
+1. Gunakan [demeter.run](https://demeter.run/), jika Anda belum memiliki akun, maka buatlah akun baru.
 2. Tambahkan resource dan pilih workspace.
 3. Pada bagian toolchain, pilih PlutusTx.
 4. Pilih ukuran large workspace.

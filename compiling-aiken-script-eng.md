@@ -10,7 +10,7 @@ In this documentation, there are two methods to set up the environment. We can u
 
 ### On Demeter
 
-1. Use demeter.run, if you haven’t an account then create new account
+1. Use [demeter.run](https://demeter.run/), if you haven’t an account then create new account
 2. Add resource and select workspace
 3. In the toolchain section, select Aiken
 4. Select a large workspace size
@@ -131,7 +131,7 @@ In this documentation, there are two methods to set up the environment. We can u
    ```
 
    **_Hint: After running the blueprint convert command, it will appear in the terminal as shown in the image below_**
-   
+
    ![blueprint-convert](public/blueprint-convert.jpg)
 
 3. Copy and paste the UPLC template that appears in the terminal

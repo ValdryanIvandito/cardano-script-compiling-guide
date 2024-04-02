@@ -4,13 +4,13 @@ Dokumentasi ini menyediakan panduan langkah demi langkah yang disederhanakan men
 
 # Langkah-langkah
 
-Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita dapat menggunakan demeter.run atau mesin lokal kita, pilih salah satu.
+Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita dapat menggunakan [demeter.run](https://demeter.run/) atau mesin lokal kita, pilih salah satu.
 
 ## Step-1 Setup Environment
 
 ### Demeter
 
-1. Gunakan demeter.run, jika Anda belum memiliki akun, maka buatlah akun baru.
+1. Gunakan [demeter.run](https://demeter.run/), jika Anda belum memiliki akun, maka buatlah akun baru.
 2. Tambahkan resource dan pilih workspace.
 3. Pada bagian toolchain, pilih Aiken.
 4. Pilih ukuran large workspace.
