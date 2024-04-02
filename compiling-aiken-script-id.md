@@ -134,7 +134,7 @@ Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita da
 
    ![blueprint-convert](public/blueprint-convert.jpg)
 
-3. Copy dan paste template UPLC di terminal ke File always-succeeds.plutus
+3. Copy dan paste template UPLC yang muncul di terminal ke File always-succeeds.plutus
 
 # Demo
 
