@@ -1,12 +1,12 @@
 # Pendahuluan
 
-Ini adalah dokumentasi yang memberikan panduan langkah demi langkah cara mengompilasi skrip Aiken menjadi UPLC. Jika Anda berhasil mengompilasi skrip, lihatlah file plutus.json dan di dalamnya terdapat compiledCode, yang merupakan bagian CBOR dari UPLC dan dapat digunakan di on-chain.
+Dokumentasi ini menyediakan panduan langkah demi langkah yang disederhanakan mengenai cara mengompilasi skrip Aiken menjadi UPLC. Setelah Anda berhasil mengkompilasi skrip, jalankan _'aiken blueprint convert'_ di terminal. Anda akan melihat UPLC, yang memiliki format CBOR yang akan digunakan secara on-chain.
 
 # Langkah-langkah
 
 Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita dapat menggunakan demeter.run atau mesin lokal kita, pilih salah satu.
 
-## Setup Environment
+## Step-1 Setup Environment
 
 ### Demeter
 
@@ -78,7 +78,7 @@ Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita da
 
    **_Catatan: Anda mengetahui bahwa Aiken berhasil terinstall jika dapat melihat versi Aiken tersebut_**
 
-## Buka Terminal Bash di VSCode
+## Step-2 Buka Terminal Bash di VSCode
 
 1. Buat Proyek Aiken Baru
 
@@ -116,31 +116,25 @@ Dalam dokumentasi ini, terdapat dua metode untuk menyiapkan environment. Kita da
    aiken build
    ```
 
-   **_Hasil: Lihat di file plutus.json, disitu terdapat compilerCode yang merupakan CBOR._**
+## Step-3 Lihat Hasilnya
 
-6. Buat Direktori Output dan File always-succeeds.plutus
+1. Buat Direktori Output dan File always-succeeds.plutus
 
    ```bash
    mkdir -p output && touch output/always-succeeds.plutus
    ```
 
-7. Copy dan paste template UPLC berikut ke File always-succeeds.plutus
+2. Blueprint Convert
 
-   ```json
-   {
-     "type": "PlutusScriptV2",
-     "description": "",
-     "cborHex": "49480100002221200101"
-   }
+   ```bash
+   aiken blueprint convert
    ```
 
-8. Ganti CBOR Hex
+   **_Petunjuk: Setelah menjalankan perintah blueprint convert, maka akan muncul di terminal seperti terlihat pada gambar di bawah ini_**
 
-   Pada file Always-succeeds.plutus, ganti string CBOR dengan string compilerCode dari file plutus.json seperti pada gambar di bawah ini:
+   ![blueprint-convert](public/blueprint-convert.jpg)
 
-   ![always-succeeds.plutus](public/aiken-script-compiled.png)
-
-   Jika sudah selesai, selamat! Anda telah berhasil mengkompilasi skrip validator Aiken ke dalam UPLC.
+3. Copy dan paste template UPLC di terminal ke File always-succeeds.plutus
 
 # Demo
 
@@ -148,20 +142,14 @@ Berikut adalah video yang direkam oleh Komunitas Developer Cardano Indonesia di 
 
 # Referensi
 
+[Gimbalabs PPBL2023 Module 101: Plutus Terminology](https://plutuspbl.io/modules/101/slts)
+
+[Gimbalabs PPBL2023 Module 101.1: Introducing UPLC](https://plutuspbl.io/modules/101/1011)
+
+[Gimbalabs PPBL2023 Module 101.2: The Role of UPLC](https://plutuspbl.io/modules/101/1012)
+
+[Gimbalabs PPBL2023 Module 101.5: Compiling Aiken](https://plutuspbl.io/modules/101/1015)
+
 [Cardano Developers Portal: Plutus](https://developers.cardano.org/docs/smart-contracts/plutus/)
 
-[Plutus Core and PlutusTx User Guide](https://plutus.readthedocs.io/en/latest/explanations/platform.html)
-
-[The Plutus Compilation Pipeline: Understanding Plutus Core](https://well-typed.com/blog/2022/08/plutus-cores/)
-
-[CBOR Documentation](https://cbor.io/)
-
-[Gimbalabs PPBL Module 101: Plutus Terminology](https://plutuspbl.io/modules/101/slts)
-
-[Gimbalabs PPBL Module 101.1: Introducing UPLC](https://plutuspbl.io/modules/101/1011)
-
-[Gimbalabs PPBL Module 101.2: The Role of UPLC](https://plutuspbl.io/modules/101/1012)
-
-[Gimbalabs PPBL Module 101.5: Compiling Aiken](https://plutuspbl.io/modules/101/1015)
-
-[Cardano Academy](https://academy.cardanofoundation.org/)
+[Demeter](https://demeter.run/)

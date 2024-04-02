@@ -1,12 +1,12 @@
 # Introduction
 
-This is documentation that gives you a step-by-step guide on how to compile a PlutusTx script into UPLC. If you successfully compile the script, you will find a file with a **_.plutus_** extension, which is a UPLC. This UPLC has a CBOR format that can be used on-chain.
+This documentation provides a simplified, step-by-step guide on how to compile a PlutusTx script into UPLC. If you successfully compile the script, you will find a file with a **_.plutus_** extension, which is a UPLC or Plutus Script. This Script has a CBOR format that will be used on-chain.
 
 When installing the Plutus environment on our local machine, it can require significant effort. However, there is an alternative. We can use [demeter.run](https://demeter.run/), which provides Cardano infrastructures, tools, libraries, and, of course, the Plutus environment.
 
 # Step by step
 
-## Setup Demeter
+## Step-1 Setup Demeter
 
 1. Use demeter.run, if you haven’t an account then create new account
 2. Add resource and select workspace
@@ -15,7 +15,7 @@ When installing the Plutus environment on our local machine, it can require sign
 5. Select a network. In this example, we'll use Preprod
 6. Run the workspace and wait a moment. After provisioning is complete, then open the VSCode feature in the browser
 
-## Open a Bash Terminal in the VSCode
+## Step-2 Open a Bash Terminal in the VSCode
 
 1. Clone Gimbalabs PPBL2023 Plutus Template
 
@@ -48,7 +48,7 @@ When installing the Plutus environment on our local machine, it can require sign
    writeAlwaysSucceedsScript
    ```
 
-## Result
+## Step-3 See the Result
 
 If you successfully execute the writeAlwaysSucceedsScript, the result will be shown as right() in the terminal, and in the output directory, you'll find a file named always-succeeds.plutus, as shown in the image below:
 
@@ -64,20 +64,14 @@ The following is a video recorded by the Indonesian Cardano Developers Community
 
 # References
 
+[Gimbalabs PPBL2023 Module 101: Plutus Terminology](https://plutuspbl.io/modules/101/slts)
+
+[Gimbalabs PPBL2023 Module 101.1: Introducing UPLC](https://plutuspbl.io/modules/101/1011)
+
+[Gimbalabs PPBL2023 Module 101.2: The Role of UPLC](https://plutuspbl.io/modules/101/1012)
+
+[Gimbalabs PPBL2023 Module 101.3: Compiling PlutusTx](https://plutuspbl.io/modules/101/1013)
+
 [Cardano Developers Portal: Plutus](https://developers.cardano.org/docs/smart-contracts/plutus/)
 
-[Plutus Core and PlutusTx User Guide](https://plutus.readthedocs.io/en/latest/explanations/platform.html)
-
-[The Plutus Compilation Pipeline: Understanding Plutus Core](https://well-typed.com/blog/2022/08/plutus-cores/)
-
-[CBOR Documentation](https://cbor.io/)
-
-[Gimbalabs PPBL Module 101: Plutus Terminology](https://plutuspbl.io/modules/101/slts)
-
-[Gimbalabs PPBL Module 101.1: Introducing UPLC](https://plutuspbl.io/modules/101/1011)
-
-[Gimbalabs PPBL Module 101.2: The Role of UPLC](https://plutuspbl.io/modules/101/1012)
-
-[Gimbalabs PPBL Module 101.3: Compiling PlutusTx](https://plutuspbl.io/modules/101/1013)
-
-[Cardano Academy](https://academy.cardanofoundation.org/)
+[Demeter](https://demeter.run/)
