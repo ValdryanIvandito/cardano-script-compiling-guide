@@ -150,6 +150,6 @@ Berikut adalah video yang direkam oleh Komunitas Developer Cardano Indonesia di 
 
 [Gimbalabs PPBL2023 Module 101.5: Compiling Aiken](https://plutuspbl.io/modules/101/1015)
 
-[Cardano Developers Portal: Plutus](https://developers.cardano.org/docs/smart-contracts/plutus/)
+[Cardano Developer Portal: Plutus](https://developers.cardano.org/docs/smart-contracts/plutus/)
 
 [Demeter](https://demeter.run/)
